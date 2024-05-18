@@ -17,19 +17,19 @@
     .warning {
         background-color: rgba(255, 132, 132, 0.576);
     }
+	body {
+		background-color: #110c20;
+		color: #f7f7f7;
+		text-align: center;
+	}
+	a {
+		font-size: 30px
+	}
 </style>
 <body>
-    <noscript><h1 class="warning">Please enable JavaScript in your browser to continue.</h1></noscript>
+    <h1>Select language/Wybierz język</h1>
+	<a href="./main/PL">Polski<a/>
+	<a href="./main/EN">English<a/>
+	<noscript><h1 class="warning">Please enable JavaScript in your browser to continue.</h1></noscript>
 </body>
-<script>
-    fetch('https://ipinfo.io/json').then((res) => {
-        res.json().then((data) => {         
-            if(data.country === "PL"){
-                window.location.href = './main/PL';
-           } else {
-            window.location.href = './main/EN'
-           }
-        });
-    });
-</script>
 </html>
