@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Kerso, Mpk, MpkCheck, mpkcheck, kerso, mpk, Lodz, Łódź, lodz, lódź">
+    <meta name="description" content="Check the virtual schedule of buses and streetcars (works only in Lodz)">
+    <meta name="author" content="Kerso">
+    <!-- discord meta tags -->
+    <meta property="og:title" content="MpkCheck" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://mpkcheck.kerso.dev/" />
+    <meta property="og:description" content="Check the virtual schedule of buses and streetcars! (works only in Lodz)" />
+    <title>MpkCheck</title>
+</head>
+<style>
+    .warning {
+        background-color: rgba(255, 132, 132, 0.576);
+    }
+</style>
+<body>
+    <noscript><h1 class="warning">Please enable JavaScript in your browser to continue.</h1></noscript>
+</body>
+<script>
+    fetch('https://ipinfo.io/json').then((res) => {
+        res.json().then((data) => {         
+            if(data.country === "PL"){
+                window.location.href = './main/PL';
+           } else {
+            window.location.href = './main/EN'
+           }
+        });
+    });
+</script>
+</html>
